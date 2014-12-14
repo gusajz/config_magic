@@ -1,0 +1,8 @@
+Very simple configuration module with stuff that I usually need.
+
+1. Singleton access to configuration in memory.
+2. Load defaults from a dictionary.
+3. Load a whole directory of configuration files (and merging the result with the previusly loaded configuration or defaults).
+
+TODO:
+Add HOCON and YAML support.

@@ -23,6 +23,9 @@ def load_from_dict(new__config):
     _dict_merge(_config, new__config)
 
 def load_from_directory(_config_base_dir):
+    if _config_base_dir is None:
+        raise Exception('Configuration directory not defined')
+        
     new__config = {}
     for filename in glob.iglob(os.path.join(_config_base_dir, '*.json')):
         key = os.path.splitext(os.path.split(filename)[1])[0]
